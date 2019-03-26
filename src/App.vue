@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
+      <v-btn color="success">Success</v-btn>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>

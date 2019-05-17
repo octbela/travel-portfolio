@@ -2,12 +2,20 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
+import BootstrapVue from 'bootstrap-vue'
+import axios from 'axios'
+import '././assets/scss/main.scss'
 import './registerServiceWorker'
 
-Vue.use(Vuetify)
+Vue.use(BootstrapVue)
 Vue.config.productionTip = false
+
+Vue.prototype.$api = axios.create({
+  baseURL: process.env.API_URL,
+  headers: {
+    'Content-Type': 'application/json'
+  }
+})
 
 new Vue({
   router,

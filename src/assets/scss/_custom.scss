@@ -1,0 +1,91 @@
+body{
+    font-family: 'Patrick Hand', cursive;
+}
+
+.card-custom{
+    border: none;
+    text-align: left;
+    .card-body{
+        .card-title{
+            font-weight: bold;
+        }
+    }
+    img{
+        object-fit: cover;
+        border-radius: 0;
+    }
+}
+
+.border-custom{
+    border-radius: 0;
+}
+
+.size-form-custom{
+    height: 50px;
+}
+
+.section-custom{
+    margin-bottom: 30px;
+}
+
+.section-title{
+    font-weight: bold;
+    margin-bottom: 40px
+}
+
+.category-card{
+    img{
+        height: 350px;
+    }
+    .card-body{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: #fff;
+        padding: 5px 20px;
+        font-weight: 600;
+    }
+}
+
+.latest-card{
+    &:hover,
+    &:focus{
+        .card-body{
+            box-shadow: 0px 2px 29px -1px rgba(176,176,176,1);
+            background: transparent;
+        }
+    }
+}
+
+.headline-card{
+    img{
+        height: 380px;
+    }
+    &:hover,
+    &:focus{
+        top: -30px;
+    }
+}
+
+.subscribe-items{
+    align-items: center;
+    display: flex;
+    background-color: #102434;
+    color: #fff;
+    padding: 50px;
+    .subscribe-label{
+        width: 50%;
+    }
+    .subscribe-input{
+        width: 30%;
+        margin-right: 30px;
+        background:  #142A3B;
+        border: 1px solid #142A3B;
+        // input{
+           
+        // }
+    }
+    .subscribe-btn{
+        padding: 0 40px;
+    }
+}

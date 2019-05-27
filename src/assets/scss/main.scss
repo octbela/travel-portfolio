@@ -2,8 +2,12 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index.scss';
 
+@import './base';
 //Custom
 @import './custom';
 
+
+@import './mixins/margin_padding_helper_mixin';
+
 // font
-@import url('https://fonts.googleapis.com/css?family=Patrick+Hand');
+@import url('https://fonts.googleapis.com/css?family=Karla|Roboto&display=swap');

@@ -6,11 +6,15 @@
         </h3>
         <b-row>
           <b-col cols="12" md="3" v-for="(news, index) in computedCategories" :key="index">
-            <b-card class="category-card card-custom" img-src="https://cdn.popbela.com/content-images/post/20190421/00-wisata-dieng-ec695b95877e0209621337ba20b1cdf0_390x260.jpg" img-alt="Image" img-top>
-                <b-card-text>
-                  {{news.category}}
-                </b-card-text>
-            </b-card>
+            <div class="wrap-hover-card">
+                <b-card class="card-custom category-card" img-src="https://cdn.popbela.com/content-images/post/20190421/00-wisata-dieng-ec695b95877e0209621337ba20b1cdf0_390x260.jpg" img-alt="Image" img-top>
+                </b-card>
+                <router-link :to="{ name: 'Category-view-select', params: { category: news.category} }">
+                  <div class="category-label">
+                    {{news.category}}
+                  </div>
+                </router-link>
+            </div>
           </b-col>
         </b-row>
       </b-container>

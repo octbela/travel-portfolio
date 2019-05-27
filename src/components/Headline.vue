@@ -6,11 +6,24 @@
         </h3>
         <b-row>
           <b-col cols="12" md="3" v-for="(news, index) in computedHeadline" :key="index">
-            <b-card class="headline-card card-custom" :title="news.name" img-src="https://cdn.idntimes.com/content-images/community/2019/04/dscf0105-6e223d7aefa489a06c8bdd0dbd0091e2.jpg" img-alt="Image" img-top>
-                <b-card-text>
-                  {{news.description}}
-                </b-card-text>
-            </b-card>
+            <div class="wrap-hover-card headline-hover-card">
+              <b-card no-body class="headline-card card-custom">
+                <b-card-img src="https://cdn.idntimes.com/content-images/community/2019/04/dscf0105-6e223d7aefa489a06c8bdd0dbd0091e2.jpg" alt="Image" top></b-card-img>
+                <b-card-body>
+                  <router-link :to="{ name: 'Detail', params: { id: news.id} }">
+                    <b-card-title>
+                      {{news.name}}
+                    </b-card-title>
+                  </router-link>
+                  <b-card-text>
+                    {{news.description}}
+                  </b-card-text>
+                </b-card-body>
+              </b-card>
+              <!-- <div class="category-label">
+                  {{news.category}}
+              </div> -->
+            </div>
           </b-col>
         </b-row>
       </b-container>

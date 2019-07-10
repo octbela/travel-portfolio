@@ -12,8 +12,20 @@ h4 {
   color: $primary-title;
 }
 
+.btn-base-blue {
+  background: #3e7fff;
+}
+
+.btn-base-white {
+  padding: 0 40px;
+  background: #fff;
+  color: $primary-turquoise;
+  border: 1px solid #fff;
+}
+
 .Header {
   position: relative;
+  margin-bottom: 100px;
 
   .header-background {
     position: relative;
@@ -31,6 +43,22 @@ h4 {
     // .wrap-search-form{
     //     display: flex;
     // }
+    position: absolute;
+    top: 45%;
+
+    .search-form {
+      display: flex;
+
+      input {
+        width: 555px;
+        box-shadow: 21px 6px 37px 6px rgba(0, 0, 0, 0.09);
+        border: none;
+      }
+
+      button {
+        border: 1px solid #3e7fff;
+      }
+    }
   }
 }
 
@@ -51,12 +79,6 @@ a {
 .card-custom {
   border: none;
   text-align: left;
-
-  .card-body {
-    .card-title {
-      // font-weight: 600;
-    }
-  }
 
   img {
     object-fit: cover;
@@ -88,9 +110,9 @@ a {
 
 .section-title.big {
   // font-weight: 600;
-  font-size: 35px;
-  margin-bottom: 10px;
-
+  font-size: 45px;
+  margin-bottom: 50px;
+  font-weight: bold;
 }
 
 .category-card {
@@ -128,28 +150,6 @@ a {
 .container-detail {
   width: 800px;
   margin: 0 auto;
-
-  blockquote {
-    background: #f9f9f9;
-    border-left: 10px solid #ccc;
-    margin: 1.5em 10px;
-    padding: 0.5em 10px;
-    quotes: "\201C""\201D""\2018""\2019";
-  }
-
-  blockquote:before {
-    color: #ccc;
-    content: open-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
-  }
-
-  blockquote p {
-    display: inline;
-  }
-
   .wrap-detail-title {
     margin-bottom: 40px;
   }
@@ -157,6 +157,31 @@ a {
   .detail-author {
     a {
       font-size: 20px;
+    }
+  }
+
+  .detail-content-item {
+    line-height: 2;
+
+    blockquote {
+      background: #f9f9f9;
+      border-left: 10px solid #ccc;
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+    }
+
+    blockquote:before {
+      color: #ccc;
+      content: open-quote;
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+    }
+
+    blockquote p {
+      display: inline;
     }
   }
 
@@ -180,18 +205,23 @@ a {
 }
 
 .subscribe-items {
+  .container-subscribe-items {
+    display: flex;
+  }
+
   h3 {
     color: #fff;
   }
 
-  // align-items: center;
-  // display: flex;
   background-color: $primary-turquoise;
   color: #fff;
   padding: 50px;
 
-  // .subscribe-label{
-  // }
+  .subscribe-label {
+    width: 40%;
+    margin-right: 60px;
+  }
+
   .subscribe-input {
     margin-right: 30px;
     background: #142A3B;
@@ -207,6 +237,71 @@ a {
   .subscribe-form {
     display: flex;
     align-items: center;
+    width: 60%;
     // justify-content: center;
+  }
+}
+
+.section-header {
+  position: relative;
+  height: 70vh;
+
+  .header-img {
+    position: absolute;
+    height: 70vh;
+    object-fit: cover;
+    width: 50%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .wrap-nav-header {
+    .nav-header-brand {
+      margin-right: 90px;
+    }
+  }
+}
+
+.section-headline {
+  .wrap-headline-items {
+    .headline-item {
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.section-latest {
+  .wrap-latest-items {
+    .latest-item {
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.section-category {
+  .slick-slider {
+    .slick-prev {
+      position: absolute;
+      z-index: 10;
+      right: 70px;
+      top: -42px;
+      background: #fff;
+      color: $primary-turquoise;
+      border: 1px solid $primary-body;
+    }
+
+    .slick-next {
+      position: absolute;
+      top: -42px;
+      right: 0;
+      background: #fff;
+      color: $primary-turquoise;
+      border: 1px solid $primary-body;
+    }
   }
 }

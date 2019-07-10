@@ -1,33 +1,22 @@
 <template>
     <div class="Footer">
-        <b-container>
+        <!-- <b-container> -->
             <Subscribe/>
-            <b-row>
+            <!-- <b-row>
                 <b-col cols="12" md="6">
                     <h3 class="section-title small">
                         <font-awesome-icon icon="suitcase-rolling" /> Travel
                     </h3>
                     <ul class="list-unstyled">
                         <li>
-                            <ul class="list-unstyled">
-                                <li>
-                                    +6283848917538
-                                </li>
-                                <li>
-                                    |
-                                </li>
-                                <li>
-                                    nabilahpermata6@gmail.com
-                                </li>
-                            </ul>
+                            +6283848917538 | nabilahpermata6@gmail.com
                         </li>
                         <li>
                             <ul class="list-unstyled">
                                 <li>
-                                    <!-- <font-awesome-icon icon="facebook-square" /> -->
                                 </li>
                                 <li>
-                                    <!-- <font-awesome-icon icon="facebook-f" /> -->
+                                    <font-awesome-icon icon="twitter" />
                                 </li>
                             </ul>
                         </li>
@@ -87,12 +76,12 @@
                         </li>
                     </ul>
                 </b-col>
-            </b-row>
+            </b-row> -->
             <div class="border-top-thick mb-10"></div>
             <div class="text-center">
                 <font-awesome-icon icon="copyright" /> 2019 | Travel Website by Nabilah Ayu Permata
             </div>
-        </b-container>
+        <!-- </b-container> -->
     </div>
 </template>
 

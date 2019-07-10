@@ -1,11 +1,11 @@
 <template>
-    <div class="headline section-custom">
-      <b-container>
-        <h3 class="text-left section-title">
+    <div class="section-headline section-custom">
+      <!-- <b-container> -->
+        <h3 class="text-left section-title big">
           Experience<br>Travel With Us.
         </h3>
-        <b-row>
-          <b-col cols="12" md="3" v-for="(news, index) in computedHeadline" :key="index">
+        <b-row class="wrap-headline-items">
+          <b-col class="headline-item" cols="12" md="3" v-for="(news, index) in computedHeadline" :key="index">
             <div class="wrap-hover-card headline-hover-card">
               <b-card no-body class="headline-card card-custom">
                 <b-card-img src="https://cdn.idntimes.com/content-images/community/2019/04/dscf0105-6e223d7aefa489a06c8bdd0dbd0091e2.jpg" alt="Image" top></b-card-img>
@@ -26,7 +26,7 @@
             </div>
           </b-col>
         </b-row>
-      </b-container>
+      <!-- </b-container> -->
     </div>
 </template>
 

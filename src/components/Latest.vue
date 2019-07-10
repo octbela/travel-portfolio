@@ -1,11 +1,11 @@
 <template>
-    <div class="latest section-custom">
-      <b-container>
-        <h3 class="text-left section-title">
+    <div class="section-latest section-custom">
+      <!-- <b-container> -->
+        <h3 class="text-left section-title big">
           What's new?
         </h3>
-        <b-row>
-          <b-col cols="12" md="4" v-for="(news, index) in computedLatest" :key="index">
+        <b-row class="wrap-latest-items">
+          <b-col class="latest-item" cols="12" md="4" v-for="(news, index) in computedLatest" :key="index">
             <b-card no-body class="latest-card card-custom">
                 <b-card-img src="https://cdn.idntimes.com/content-images/community/2019/04/dscf0105-6e223d7aefa489a06c8bdd0dbd0091e2.jpg" alt="Image" top>
                 </b-card-img>
@@ -23,7 +23,7 @@
             </b-card>
           </b-col>
         </b-row>
-      </b-container>
+      <!-- </b-container> -->
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Search/>
+    <!-- <Search/> -->
     <Headline/>
     <Category/>
     <Latest/>
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Search from '@/components/partials/Search.vue'
+// import Search from '@/components/partials/Search.vue'
 import Headline from '@/components/Headline.vue'
 import Category from '@/components/Category.vue'
 import Latest from '@/components/Latest.vue'
@@ -18,8 +18,8 @@ export default {
   components: {
     Headline,
     Category,
-    Latest,
-    Search
+    Latest
+    // Search
   }
 }
 </script>

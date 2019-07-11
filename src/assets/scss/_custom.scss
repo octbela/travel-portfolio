@@ -34,15 +34,6 @@ h4 {
   }
 
   .wrap-search {
-    // position: absolute;
-    // top: 50%;
-    // // left: 15%;
-    // z-index: 5;
-    // left: 497px;
-    // width: 672px;
-    // .wrap-search-form{
-    //     display: flex;
-    // }
     position: absolute;
     top: 45%;
 
@@ -53,6 +44,18 @@ h4 {
         width: 555px;
         box-shadow: 21px 6px 37px 6px rgba(0, 0, 0, 0.09);
         border: none;
+
+        @media #{$smartphone-tablet} {
+          width: 100%;
+        }
+        
+        @media #{$smartphone-tablet-min} {
+          width: 345px;
+        }
+
+        @media #{$smartphone-tablet-min-pro} {
+          width: 465px;
+        }
       }
 
       button {
@@ -76,6 +79,10 @@ a {
   border-top: 2px solid #99a1a8;
 }
 
+.border-top-thin {
+  border-top: 1px solid #99a1a8;
+}
+
 .card-custom {
   border: none;
   text-align: left;
@@ -95,11 +102,10 @@ a {
 }
 
 .section-custom {
-  margin-bottom: 30px;
+  margin-bottom: 70px;
 }
 
 .section-title {
-  // font-weight: bold;
   margin-bottom: 40px
 }
 
@@ -109,7 +115,6 @@ a {
 }
 
 .section-title.big {
-  // font-weight: 600;
   font-size: 45px;
   margin-bottom: 50px;
   font-weight: bold;
@@ -150,6 +155,7 @@ a {
 .container-detail {
   width: 800px;
   margin: 0 auto;
+
   .wrap-detail-title {
     margin-bottom: 40px;
   }
@@ -207,6 +213,10 @@ a {
 .subscribe-items {
   .container-subscribe-items {
     display: flex;
+
+    @media #{$smartphone-tablet} {
+      display: inherit;
+    }
   }
 
   h3 {
@@ -220,6 +230,15 @@ a {
   .subscribe-label {
     width: 40%;
     margin-right: 60px;
+
+    .section-title.big {
+      margin-bottom: 10px;
+      font-size: 35px;
+    }
+
+    @media #{$smartphone-tablet} {
+      width: 100%;
+    }
   }
 
   .subscribe-input {
@@ -238,7 +257,11 @@ a {
     display: flex;
     align-items: center;
     width: 60%;
-    // justify-content: center;
+
+    @media #{$smartphone-tablet} {
+      display: inherit;
+      width: 100%;
+    }
   }
 }
 
@@ -259,31 +282,39 @@ a {
   .wrap-nav-header {
     .nav-header-brand {
       margin-right: 90px;
-    }
-  }
-}
 
-.section-headline {
-  .wrap-headline-items {
-    .headline-item {
-      &:last-child {
-        padding-right: 0;
+      @media #{$smartphone-tablet-min-pro} {
+        margin-right: 30px;
       }
     }
   }
 }
 
-.section-latest {
-  .wrap-latest-items {
-    .latest-item {
-      &:last-child {
-        padding-right: 0;
-      }
-    }
-  }
-}
+// .section-headline {
+//   .wrap-headline-items {
+//     .headline-item {
+//       &:last-child {
+//         // padding-right: 0;
+//       }
+//     }
+//   }
+// }
+
+// .section-latest {
+//   .wrap-latest-items {
+//     .latest-item {
+//       &:last-child {
+//         // padding-right: 0;
+//       }
+//     }
+//   }
+// }
 
 .section-category {
+  .big {
+    margin-bottom: 30px;
+  }
+
   .slick-slider {
     .slick-prev {
       position: absolute;

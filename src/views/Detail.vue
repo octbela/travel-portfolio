@@ -6,6 +6,7 @@
             <div class="wrap-detail-title">
               <h3 class="section-title mb-25 text-center">
                 So how difficult is it really to climb Mount Kilimanjaro?
+                <!-- {{detail.name}} -->
               </h3>
               <div class="detail-author text-center">
                 <a href="javascript:;">Nabilah Ayu Permata</a>
@@ -15,29 +16,34 @@
           </div>
         </div>
       </b-container>
-      <Category/>
+      <!-- <Category/> -->
       <Latest/>
     </div>
 </template>
 
 <script>
-import Category from '@/components/Category.vue'
+import AllCategories from '@/components/AllCategories.vue'
 import Latest from '@/components/Latest.vue'
 import DetailContent from '@/components/partials/detail/detail-content-item.vue'
 
 export default {
   name: 'Detail',
   components: {
-    Category,
+    AllCategories,
     Latest,
     DetailContent
   },
   mounted () {
-    // this.fetchArticles()
+    this.$store.dispatch('fetchDetailsArticles', {judul : this.$route.params.id})
+  },
+  computed: {
+    details () {
+      return this.$store.state.detail_articles
+    }
   },
   data: () => {
     return {
-      articles: []
+      // articles: []
     }
   },
   methods: {

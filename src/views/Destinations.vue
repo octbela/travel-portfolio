@@ -1,20 +1,20 @@
 <template>
   <div class="destination">
     <!-- <Headline/> -->
-    <Category/>
+    <!-- <Category/> -->
     <Latest/>
   </div>
 </template>
 
 <script>
 
-import Category from '@/components/Category.vue'
+import AllCategories from '@/components/AllCategories.vue'
 import Latest from '@/components/Latest.vue'
 
 export default {
   name: 'Destination',
   components: {
-    Category,
+    AllCategories,
     Latest
   }
 }

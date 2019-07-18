@@ -12,6 +12,10 @@ h4 {
   color: $primary-title;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 .btn-base-blue {
   background: #3e7fff;
 }
@@ -48,7 +52,7 @@ h4 {
         @media #{$smartphone-tablet} {
           width: 100%;
         }
-        
+
         @media #{$smartphone-tablet-min} {
           width: 345px;
         }
@@ -137,14 +141,17 @@ a {
   }
 }
 
-.headline-card {
-  img {
-    height: 380px;
-  }
+.headline-hover-card {
+  .headline-card {
+    img {
+      height: 380px;
+    }
 
-  &:hover,
-  &:focus {
-    top: -30px;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+      transform: scale(1.10, 1.10);
+    }
   }
 }
 
@@ -153,8 +160,8 @@ a {
 }
 
 .container-detail {
-  width: 800px;
-  margin: 0 auto;
+  // width: 800px;
+  // margin: 0 auto;
 
   .wrap-detail-title {
     margin-bottom: 40px;
@@ -277,6 +284,11 @@ a {
     top: 0;
     right: 0;
     z-index: -1;
+
+    @media #{$smartphone-tablet} {
+      width: 100%;
+      height: 65vh;
+    }
   }
 
   .wrap-nav-header {
@@ -290,49 +302,69 @@ a {
   }
 }
 
-// .section-headline {
-//   .wrap-headline-items {
-//     .headline-item {
-//       &:last-child {
-//         // padding-right: 0;
-//       }
-//     }
-//   }
-// }
-
-// .section-latest {
-//   .wrap-latest-items {
-//     .latest-item {
-//       &:last-child {
-//         // padding-right: 0;
-//       }
-//     }
-//   }
-// }
-
 .section-category {
   .big {
     margin-bottom: 30px;
   }
 
   .slick-slider {
+    margin: 0 -15px;
+
+    .slick-slide.slick-active:first-child,
+    .slick-slide.slick-active:last-child {
+      margin: 0;
+    }
+
+    .slick-slide {
+      position: relative;
+      text-align: center;
+      margin-right: 15px;
+      margin-left: 15px;
+      padding: 10px;
+
+      .slick-label {
+        position: absolute;
+        bottom: 10px;
+        color: black;
+        background: #fff;
+        right: 10px;
+        padding: 5px 15px;
+      }
+
+      // margin-right: 100px;
+      img {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+      }
+    }
+
     .slick-prev {
       position: absolute;
       z-index: 10;
-      right: 70px;
+      right: 60px;
+      left: auto;
       top: -42px;
       background: #fff;
       color: $primary-turquoise;
-      border: 1px solid $primary-body;
+
+      // border: 1px solid $primary-body;
+      &:before {
+        color: $primary-turquoise;
+      }
     }
 
     .slick-next {
       position: absolute;
       top: -42px;
-      right: 0;
+      right: 25px;
       background: #fff;
       color: $primary-turquoise;
-      border: 1px solid $primary-body;
+
+      // border: 1px solid $primary-body;
+      &:before {
+        color: $primary-turquoise;
+      }
     }
   }
 }

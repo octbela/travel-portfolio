@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import BootstrapVue from 'bootstrap-vue'
-import axios from 'axios'
+import 'slick-carousel/slick/slick.min'
 import '././assets/scss/main.scss'
 import './registerServiceWorker'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -19,13 +19,6 @@ library.add(faTwitter, faFacebook)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
-
-Vue.prototype.$api = axios.create({
-  baseURL: process.env.API_URL,
-  headers: {
-    'Content-Type': 'application/json'
-  }
-})
 
 new Vue({
   router,

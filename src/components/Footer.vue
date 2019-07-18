@@ -6,7 +6,7 @@
                 <b-row>
                     <b-col cols="12" md="6">
                         <h3 class="section-title small">
-                            <font-awesome-icon icon="suitcase-rolling" /> Travel
+                            <font-awesome-icon icon="suitcase-rolling" /> Octbela
                         </h3>
                         <ul class="list-unstyled">
                             <li>
@@ -17,7 +17,7 @@
                                     <li>
                                     </li>
                                     <li>
-                                        <font-awesome-icon icon="twitter" />
+                                        <!-- <font-awesome-icon icon="twitter" /> -->
                                     </li>
                                 </ul>
                             </li>

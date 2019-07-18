@@ -2,7 +2,7 @@
   <div class="home">
     <!-- <Search/> -->
     <Headline/>
-    <Category/>
+    <!-- <AllCategories/> -->
     <Latest/>
   </div>
 </template>
@@ -10,14 +10,14 @@
 <script>
 // import Search from '@/components/partials/Search.vue'
 import Headline from '@/components/Headline.vue'
-import Category from '@/components/Category.vue'
+import AllCategories from '@/components/AllCategories.vue'
 import Latest from '@/components/Latest.vue'
 
 export default {
   name: 'Home',
   components: {
     Headline,
-    Category,
+    AllCategories,
     Latest
     // Search
   }

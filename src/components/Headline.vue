@@ -1,11 +1,11 @@
 <template>
-    <div class="section-headline section-custom">
+    <div v-cloak class="section-headline section-custom">
       <!-- <b-container> -->
         <h3 class="text-left section-title big">
           Experience<br>Travel With Us.
         </h3>
         <b-row class="wrap-headline-items">
-          <b-col class="headline-item" cols="12" md="3" v-for="(news, index) in computedHeadline" :key="index">
+          <b-col class="headline-item" cols="12" md="3" v-for="(news, index) in headlines.slice(0,4)" :key="index">
             <div class="wrap-hover-card headline-hover-card">
               <b-card no-body class="headline-card card-custom">
                 <b-card-img src="https://cdn.idntimes.com/content-images/community/2019/04/dscf0105-6e223d7aefa489a06c8bdd0dbd0091e2.jpg" alt="Image" top></b-card-img>
@@ -34,26 +34,31 @@
 export default {
   name: 'Headline',
   mounted () {
-    this.fetchHeadline()
+    this.$store.dispatch('fetchHeadlines')
+  },
+  computed: {
+    headlines () {
+      return this.$store.state.all_headlines
+    }
   },
   data: () => {
     return {
-      articles: [],
-      sources: [],
-      limit: 4
+      // articles: [],
+      // sources: [],
+      // limit: 4
     }
   },
   methods: {
-    fetchHeadline () {
-      this.$api.get('https://newsapi.org/v2/sources?apiKey=f9753a1c27b041258f67fc32dd29b027').then((response) => {
-        this.articles = response.data.sources
-      })
-    }
-  },
-  computed: {
-    computedHeadline () {
-      return this.limit ? this.articles.slice(0, this.limit) : this.articles
-    }
+    // fetchHeadline () {
+    //   this.$api.get('https://newsapi.org/v2/sources?apiKey=f9753a1c27b041258f67fc32dd29b027').then((response) => {
+    //     this.articles = response.data.sources
+    //   })
+    // }
   }
+  // computed: {
+  //   computedHeadline () {
+  //     return this.limit ? this.articles.slice(0, this.limit) : this.articles
+  //   }
+  // }
 }
 </script>

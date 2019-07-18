@@ -6,8 +6,11 @@
 //Custom
 @import './custom';
 
+//Variable
+@import './variable';
+
 @import 'node_modules/slick-carousel/slick/slick.scss';
-// @import 'node_modules/slick-carousel/slick/slick-theme.scss';
+@import 'node_modules/slick-carousel/slick/slick-theme.scss';
 
 @import './mixins/margin_padding_helper_mixin';
 
